@@ -12,7 +12,7 @@ class TextToSpeech:
         if model_path is None:
             raise ValueError("model_path is not specified")
 
-        self.model_path = os.path.join(model_path, "model.pt")
+        self.model_path = f"{model_path}/model.pt"
         self.sample_rate = sample_rate
         self.speaker = speaker
         self.device = "cuda" if torch.cuda.is_available() else "cpu"
@@ -28,6 +28,9 @@ class TextToSpeech:
                 url='https://models.silero.ai/models/tts/ru/v3_1_ru.pt',
                 dst=self.model_path
             )
+
+        # self.model = torch.package.PackageImporter(self.model_path).load_pickle(package="tts_models", resource="model")
+        # self.model.to(torch.device(self.device))
 
         self.pa = pyaudio.PyAudio()
 
@@ -47,6 +50,7 @@ class TextToSpeech:
         cache_path = os.path.join(self.cache_dir, f"{filename}.wav")
         sf.write(cache_path, audio, self.sample_rate)
 
+    # TODO при каждом озвучивании модель сжирает память
     def _synthesize(self, text):
         print("no cache: synthesize start")
         model = torch.package.PackageImporter(self.model_path).load_pickle("tts_models", "model")
@@ -103,4 +107,8 @@ class TextToSpeech:
 
 if __name__ == "__main__":
     tts = TextToSpeech(model_path="models/tts")
-    tts.voice("Ярик, бери Лэн+ово, сука, не тупи!")
+    tts.voice("Один!")
+    tts.voice("Два!")
+    tts.voice("Три!")
+    tts.voice("Четыре!")
+    tts.voice("Пять!")

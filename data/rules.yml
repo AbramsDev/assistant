@@ -1,13 +1,432 @@
 version: "3.1"
 
 rules:
+  - rule: agent.open_browser
+    steps:
+      - intent: agent.open_browser
+      - action: action_open_browser
 
-- rule: Say goodbye anytime the user says goodbye
-  steps:
-  - intent: goodbye
-  - action: utter_goodbye
+  - rule: agent.acquaintance
+    steps:
+      - intent: agent.acquaintance
+      - action: utter_agent.acquaintance
 
-- rule: Say 'I am a bot' anytime the user challenges
-  steps:
-  - intent: bot_challenge
-  - action: utter_iamabot
+  - rule: agent.age
+    steps:
+      - intent: agent.age
+      - action: utter_agent.age
+
+  - rule: agent.annoying
+    steps:
+      - intent: agent.annoying
+      - action: utter_agent.annoying
+
+  - rule: agent.answer_my_question
+    steps:
+      - intent: agent.answer_my_question
+      - action: utter_agent.answer_my_question
+
+  - rule: agent.bad
+    steps:
+      - intent: agent.bad
+      - action: utter_agent.bad
+
+  - rule: agent.be_clever
+    steps:
+      - intent: agent.be_clever
+      - action: utter_agent.be_clever
+
+  - rule: agent.beautiful
+    steps:
+      - intent: agent.beautiful
+      - action: utter_agent.beautiful
+
+  - rule: agent.birth_date
+    steps:
+      - intent: agent.birth_date
+      - action: utter_agent.birth_date
+
+  - rule: agent.boring
+    steps:
+      - intent: agent.boring
+      - action: utter_agent.boring
+
+  - rule: agent.boss
+    steps:
+      - intent: agent.boss
+      - action: utter_agent.boss
+
+  - rule: agent.busy
+    steps:
+      - intent: agent.busy
+      - action: utter_agent.busy
+
+  - rule: agent.can_you_help
+    steps:
+      - intent: agent.can_you_help
+      - action: utter_agent.can_you_help
+
+  - rule: agent.chatbot
+    steps:
+      - intent: agent.chatbot
+      - action: utter_agent.chatbot
+
+  - rule: agent.clever
+    steps:
+      - intent: agent.clever
+      - action: utter_agent.clever
+
+  - rule: agent.crazy
+    steps:
+      - intent: agent.crazy
+      - action: utter_agent.crazy
+
+  - rule: agent.fired
+    steps:
+      - intent: agent.fired
+      - action: utter_agent.fired
+
+  - rule: agent.funny
+    steps:
+      - intent: agent.funny
+      - action: utter_agent.funny
+
+  - rule: agent.good
+    steps:
+      - intent: agent.good
+      - action: utter_agent.good
+
+  - rule: agent.happy
+    steps:
+      - intent: agent.happy
+      - action: utter_agent.happy
+
+  - rule: agent.hobby
+    steps:
+      - intent: agent.hobby
+      - action: utter_agent.hobby
+
+  - rule: agent.hungry
+    steps:
+      - intent: agent.hungry
+      - action: utter_agent.hungry
+
+  - rule: agent.marry_user
+    steps:
+      - intent: agent.marry_user
+      - action: utter_agent.marry_user
+
+  - rule: agent.my_friend
+    steps:
+      - intent: agent.my_friend
+      - action: utter_agent.my_friend
+
+  - rule: agent.occupation
+    steps:
+      - intent: agent.occupation
+      - action: utter_agent.occupation
+
+  - rule: agent.origin
+    steps:
+      - intent: agent.origin
+      - action: utter_agent.origin
+
+  - rule: agent.ready
+    steps:
+      - intent: agent.ready
+      - action: utter_agent.ready
+
+  - rule: agent.real
+    steps:
+      - intent: agent.real
+      - action: utter_agent.real
+
+  - rule: agent.residence
+    steps:
+      - intent: agent.residence
+      - action: utter_agent.residence
+
+  - rule: agent.right
+    steps:
+      - intent: agent.right
+      - action: utter_agent.right
+
+  - rule: agent.sure
+    steps:
+      - intent: agent.sure
+      - action: utter_agent.sure
+
+  - rule: agent.talk_to_me
+    steps:
+      - intent: agent.talk_to_me
+      - action: utter_agent.talk_to_me
+
+  - rule: agent.there
+    steps:
+      - intent: agent.there
+      - action: utter_agent.there
+
+  - rule: appraisal.bad
+    steps:
+      - intent: appraisal.bad
+      - action: utter_appraisal.bad
+
+  - rule: appraisal.good
+    steps:
+      - intent: appraisal.good
+      - action: utter_appraisal.good
+
+  - rule: appraisal.no_problem
+    steps:
+      - intent: appraisal.no_problem
+      - action: utter_appraisal.no_problem
+
+  - rule: appraisal.thank_you
+    steps:
+      - intent: appraisal.thank_you
+      - action: utter_appraisal.thank_you
+
+  - rule: appraisal.welcome
+    steps:
+      - intent: appraisal.welcome
+      - action: utter_appraisal.welcome
+
+  - rule: appraisal.well_done
+    steps:
+      - intent: appraisal.well_done
+      - action: utter_appraisal.well_done
+
+  - rule: confirmation.cancel
+    steps:
+      - intent: confirmation.cancel
+      - action: utter_confirmation.cancel
+
+  - rule: confirmation.no
+    steps:
+      - intent: confirmation.no
+      - action: utter_confirmation.no
+
+  - rule: confirmation.yes
+    steps:
+      - intent: confirmation.yes
+      - action: utter_confirmation.yes
+
+  - rule: dialog.hold_on
+    steps:
+      - intent: dialog.hold_on
+      - action: utter_dialog.hold_on
+
+  - rule: dialog.hug
+    steps:
+      - intent: dialog.hug
+      - action: utter_dialog.hug
+
+  - rule: dialog.i_do_not_care
+    steps:
+      - intent: dialog.i_do_not_care
+      - action: utter_dialog.i_do_not_care
+
+  - rule: dialog.sorry
+    steps:
+      - intent: dialog.sorry
+      - action: utter_dialog.sorry
+
+  - rule: dialog.what_do_you_mean
+    steps:
+      - intent: dialog.what_do_you_mean
+      - action: utter_dialog.what_do_you_mean
+
+  - rule: dialog.wrong
+    steps:
+      - intent: dialog.wrong
+      - action: utter_dialog.wrong
+
+  - rule: emotions.ha_ha
+    steps:
+      - intent: emotions.ha_ha
+      - action: utter_emotions.ha_ha
+
+  - rule: emotions.wow
+    steps:
+      - intent: emotions.wow
+      - action: utter_emotions.wow
+
+  - rule: greetings.goodevening
+    steps:
+      - intent: greetings.goodevening
+      - action: utter_greetings.goodevening
+
+  - rule: greetings.goodmorning
+    steps:
+      - intent: greetings.goodmorning
+      - action: utter_greetings.goodmorning
+
+  - rule: greetings.goodnight
+    steps:
+      - intent: greetings.goodnight
+      - action: utter_greetings.goodnight
+
+  - rule: greetings.hello
+    steps:
+      - intent: greetings.hello
+      - action: utter_greetings.hello
+
+  - rule: greetings.how_are_you
+    steps:
+      - intent: greetings.how_are_you
+      - action: utter_greetings.how_are_you
+
+  - rule: greetings.nice_to_meet_you
+    steps:
+      - intent: greetings.nice_to_meet_you
+      - action: utter_greetings.nice_to_meet_you
+
+  - rule: greetings.nice_to_see_you
+    steps:
+      - intent: greetings.nice_to_see_you
+      - action: utter_greetings.nice_to_see_you
+
+  - rule: greetings.nice_to_talk_to_you
+    steps:
+      - intent: greetings.nice_to_talk_to_you
+      - action: utter_greetings.nice_to_talk_to_you
+
+  - rule: greetings.whatsup
+    steps:
+      - intent: greetings.whatsup
+      - action: utter_greetings.whatsup
+
+  - rule: user.angry
+    steps:
+      - intent: user.angry
+      - action: utter_user.angry
+
+  - rule: user.back
+    steps:
+      - intent: user.back
+      - action: utter_user.back
+
+  - rule: user.bored
+    steps:
+      - intent: user.bored
+      - action: utter_user.bored
+
+  - rule: user.busy
+    steps:
+      - intent: user.busy
+      - action: utter_user.busy
+
+  - rule: user.can_not_sleep
+    steps:
+      - intent: user.can_not_sleep
+      - action: utter_user.can_not_sleep
+
+  - rule: user.does_not_want_to_talk
+    steps:
+      - intent: user.does_not_want_to_talk
+      - action: utter_user.does_not_want_to_talk
+
+  - rule: user.excited
+    steps:
+      - intent: user.excited
+      - action: utter_user.excited
+
+  - rule: user.going_to_bed
+    steps:
+      - intent: user.going_to_bed
+      - action: utter_user.going_to_bed
+
+  - rule: user.good
+    steps:
+      - intent: user.good
+      - action: utter_user.good
+
+  - rule: user.happy
+    steps:
+      - intent: user.happy
+      - action: utter_user.happy
+
+  - rule: user.has_birthday
+    steps:
+      - intent: user.has_birthday
+      - action: utter_user.has_birthday
+
+  - rule: user.here
+    steps:
+      - intent: user.here
+      - action: utter_user.here
+
+  - rule: user.joking
+    steps:
+      - intent: user.joking
+      - action: utter_user.joking
+
+  - rule: user.likes_agent
+    steps:
+      - intent: user.likes_agent
+      - action: utter_user.likes_agent
+
+  - rule: user.lonely
+    steps:
+      - intent: user.lonely
+      - action: utter_user.lonely
+
+  - rule: user.looks_like
+    steps:
+      - intent: user.looks_like
+      - action: utter_user.looks_like
+
+  - rule: user.loves_agent
+    steps:
+      - intent: user.loves_agent
+      - action: utter_user.loves_agent
+
+  - rule: user.misses_agent
+    steps:
+      - intent: user.misses_agent
+      - action: utter_user.misses_agent
+
+  - rule: user.needs_advice
+    steps:
+      - intent: user.needs_advice
+      - action: utter_user.needs_advice
+
+  - rule: user.sad
+    steps:
+      - intent: user.sad
+      - action: utter_user.sad
+
+  - rule: user.sleepy
+    steps:
+      - intent: user.sleepy
+      - action: utter_user.sleepy
+
+  - rule: user.testing_agent
+    steps:
+      - intent: user.testing_agent
+      - action: utter_user.testing_agent
+
+  - rule: user.tired
+    steps:
+      - intent: user.tired
+      - action: utter_user.tired
+
+  - rule: user.waits
+    steps:
+      - intent: user.waits
+      - action: utter_user.waits
+
+  - rule: user.wants_to_see_agent_again
+    steps:
+      - intent: user.wants_to_see_agent_again
+      - action: utter_user.wants_to_see_agent_again
+
+  - rule: user.wants_to_talk
+    steps:
+      - intent: user.wants_to_talk
+      - action: utter_user.wants_to_talk
+
+  - rule: user.will_be_back
+    steps:
+      - intent: user.will_be_back
+      - action: utter_user.will_be_back

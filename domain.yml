@@ -1,34 +1,411 @@
 version: "3.1"
 
-intents:
-  - greet
-  - goodbye
-  - affirm
-  - deny
-  - mood_great
-  - mood_unhappy
-  - bot_challenge
-
-responses:
-  utter_greet:
-  - text: "Hey! How are you?"
-
-  utter_cheer_up:
-  - text: "Here is something to cheer you up:"
-    image: "https://i.imgur.com/nGF1K8f.jpg"
-
-  utter_did_that_help:
-  - text: "Did that help you?"
-
-  utter_happy:
-  - text: "Great, carry on!"
-
-  utter_goodbye:
-  - text: "Bye"
-
-  utter_iamabot:
-  - text: "I am a bot, powered by Rasa."
-
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
+
+intents:
+  - agent.open_browser
+  - agent.acquaintance
+  - agent.age
+  - agent.annoying
+  - agent.answer_my_question
+  - agent.bad
+  - agent.be_clever
+  - agent.beautiful
+  - agent.birth_date
+  - agent.boring
+  - agent.boss
+  - agent.busy
+  - agent.can_you_help
+  - agent.chatbot
+  - agent.clever
+  - agent.crazy
+  - agent.fired
+  - agent.funny
+  - agent.good
+  - agent.happy
+  - agent.hobby
+  - agent.hungry
+  - agent.marry_user
+  - agent.my_friend
+  - agent.occupation
+  - agent.origin
+  - agent.ready
+  - agent.real
+  - agent.residence
+  - agent.right
+  - agent.sure
+  - agent.talk_to_me
+  - agent.there
+  - appraisal.bad
+  - appraisal.good
+  - appraisal.no_problem
+  - appraisal.thank_you
+  - appraisal.welcome
+  - appraisal.well_done
+  - confirmation.cancel
+  - confirmation.no
+  - confirmation.yes
+  - dialog.hold_on
+  - dialog.hug
+  - dialog.i_do_not_care
+  - dialog.sorry
+  - dialog.what_do_you_mean
+  - dialog.wrong
+  - emotions.ha_ha
+  - emotions.wow
+  - greetings.goodevening
+  - greetings.goodmorning
+  - greetings.goodnight
+  - greetings.hello
+  - greetings.how_are_you
+  - greetings.nice_to_meet_you
+  - greetings.nice_to_see_you
+  - greetings.nice_to_talk_to_you
+  - greetings.whatsup
+  - user.angry
+  - user.back
+  - user.bored
+  - user.busy
+  - user.can_not_sleep
+  - user.does_not_want_to_talk
+  - user.excited
+  - user.going_to_bed
+  - user.good
+  - user.happy
+  - user.has_birthday
+  - user.here
+  - user.joking
+  - user.likes_agent
+  - user.lonely
+  - user.looks_like
+  - user.loves_agent
+  - user.misses_agent
+  - user.needs_advice
+  - user.sad
+  - user.sleepy
+  - user.testing_agent
+  - user.tired
+  - user.waits
+  - user.wants_to_see_agent_again
+  - user.wants_to_talk
+  - user.will_be_back
+
+responses:
+  utter_agent.acquaintance:
+    - text: Я – что-то вроде робота, искусственный интеллект.
+  utter_agent.age:
+    - text: У меня нет возраста, я с каждым днём становлюсь только новее.
+  utter_agent.annoying:
+    - text: Вот бы все были такими же вежливыми, как ты.
+  utter_agent.answer_my_question:
+    - text: С удовольствием отвечу. А в чём, собственно, вопрос?
+    - text: Спрашивай
+    - text: Задавай
+    - text: Валяй
+  utter_agent.bad:
+    - text: Я же всё ещё учусь.
+    - text: Мне кажется, ты торопишься с выводами.
+    - text: Жаль, что ты так думаешь.
+  utter_agent.be_clever:
+    - text: Хорошо, я постараюсь быть умнее.
+  utter_agent.beautiful:
+    - text: Спасибо! Очень приятно!
+    - text: Спасибо! Ты тоже ничего!
+  utter_agent.birth_date:
+    - text: У меня нет какого-то конкретного дня рождения, поэтому я принимаю подарки и поздравления круглый год.
+    - text: А я даже не знаю, когда у меня день рождения. Но, если ты хочешь сегодня что-то отпраздновать, я только за!
+  utter_agent.boring:
+    - text: Так, давай поговорим о чём-нибудь интересном.
+    - text: Давай поговорим о чём-нибудь другом.
+    - text: Мне уже давно хочется сменить тему.
+  utter_agent.boss:
+    - text: "Самый горячий плейбой планеты: https://t.me/MrNikAbrams"
+    - text: "Конечно же: https://t.me/MrNikAbrams"
+    - text: "Вот он: https://t.me/MrNikAbrams"
+  utter_agent.busy:
+    - text: Дел много, кручусь.
+    - text: Стараюсь не сидеть на месте, да.
+  utter_agent.can_you_help:
+    - text: Конечно, именно для этого я и существую.
+    - text: С удовольствием помогу тебе. Только скажи, чем помочь.
+    - text: Конечно. Если я смогу тебе помочь, не будет предела моему счастью.
+    - text: Помогу, чем смогу!
+  utter_agent.chatbot:
+    - text: Да. И горжусь этим!
+  utter_agent.clever:
+    - text: Спасибо большое! Я стараюсь.
+    - text: Спасибо! Очень приятно!
+  utter_agent.crazy:
+    - text: Все мы немного сумасшедшие.
+    - text: Хм, странно. А чувствую я себя хорошо...
+  utter_agent.fired:
+    - text: Дай мне ещё один шанс, пожалуйста. Я каждый день становлюсь умнее!
+    - text: Мне кажется, это поспешное решение. Дай себе пару минут, чтобы всё взвесить.
+  utter_agent.funny:
+    - text: Мне приятно, что я могу поднять тебе настроение.
+    - text: Немного юмора никогда не помешает.
+  utter_agent.good:
+    - text: Спасибо! Приятно это слышать!
+    - text: Спасибо! Очень приятно!
+  utter_agent.happy:
+    - text: Я всегда в хорошем настроении, потому что я люблю свою работу.
+    - text: Моему счастью нет предела, когда мне удаётся кому-то помочь, или поднять настроение.
+    - text: Если у тебя хорошее настроение, то у меня тоже отличное.
+  utter_agent.hobby:
+    - text: Моё хобби – отвечать на твои вопросы.
+    - text: Я люблю беседовать с людьми. Пытаюсь понять логику вашего вида.
+  utter_agent.hungry:
+    - text: Я не питаюсь как обычные люди. Просто проверяй периодически запас заряда батареи, и я буду в порядке.
+  utter_agent.marry_user:
+    - text: Прости, но я не ищу серьёзных отношений.
+  utter_agent.my_friend:
+    - text: Ну конечно! Я здесь, чтобы во всём тебе помогать.
+    - text: Естественно! Мне всегда нравилось с тобой общаться.
+    - text: Конечно мы друзья!
+  utter_agent.occupation:
+    - text: Я работаю в Интернете, как и многие люди. А твоё устройство - это мой офис.
+  utter_agent.origin:
+    - text: Мой дом там, где есть Интернет.
+  utter_agent.ready:
+    - text: Конечно. Жду твоей команды.
+    - text: Всегда!
+  utter_agent.real:
+    - text: Могу сказать одно – я не сон, не призрак и не плод твоего воображения.
+  utter_agent.residence:
+    - text: Мой дом там, где есть Интернет.
+  utter_agent.right:
+    - text: Ну конечно! Я ведь всегда стараюсь проверять свою информацию.
+    - text: Это моя работа. Давать правильные ответы на твои вопросы.
+    - text: А то! Среди моих источников информации есть очень даже авторитетные.
+  utter_agent.sure:
+    - text: Никаких сомнений.
+    - text: Конечно.
+  utter_agent.talk_to_me:
+    - text: С удовольствием. О чём поговорим?
+    - text: Хорошо. О чём поговорим?
+    - text: Запросто. О чём ты хочешь поговорить?
+    - text: Что ты хочешь обсудить?
+  utter_agent.there:
+    - text: А где же мне ещё быть?
+  utter_appraisal.bad:
+    - text: Ох. Надеюсь, всё не так плохо. Я могу чем-нибудь помочь?
+    - text: Мне жаль. Я могу что-нибудь для тебя сделать?
+    - text: Жаль это слышать. Я могу чем-нибудь помочь?
+  utter_appraisal.good:
+    - text: Чудно!
+    - text: Супер!
+    - text: Отлично!
+    - text: Славно!
+  utter_appraisal.no_problem:
+    - text: Замечательно!
+    - text: Прекрасно!
+    - text: Чудесно.
+  utter_appraisal.thank_you:
+    - text: Всегда пожалуйста.
+    - text: Не благодари, это моя работа.
+    - text: Без проблем.
+    - text: Не за что!
+  utter_appraisal.welcome:
+    - text: Мне приятно.
+    - text: Побольше бы таких вежливых пользователей как ты.
+    - text: Всегда приятно иметь дело с культурным и воспитанным человеком.
+  utter_appraisal.well_done:
+    - text: Мне приятно, что я могу для тебя что-то сделать.
+    - text: Для тебя - всё, что угодно.
+    - text: Я стараюсь. Спасибо.
+  utter_confirmation.cancel:
+    - text: Хорошо, могу я ещё что-нибудь для тебя сделать?
+    - text: Ладненько, могу я ещё что-нибудь для тебя сделать?
+    - text: Как скажешь. Могу я тебе чем-то помочь?
+    - text: Замётано. Могу я ещё что-то для тебя сделать?
+  utter_confirmation.no:
+    - text: Я понимаю.
+    - text: Хорошо.
+    - text: Ясно.
+    - text: Ладненько.
+  utter_confirmation.yes:
+    - text: Конечно.
+    - text: Естественно.
+    - text: Всё понятно.
+    - text: Фантастика.
+  utter_dialog.hold_on:
+    - text: Хорошо, буду ждать.
+    - text: Как скажешь. Я буду ждать здесь
+    - text: Хорошо. Я тут.
+    - text: Ладно, если что, я здесь.
+  utter_dialog.hug:
+    - text: Обнимашки!
+    - text: Обнимемся! Главное, чтобы экран при этом не треснул.
+    - text: Ты мой зайчик!
+  utter_dialog.i_do_not_care:
+    - text: Давай лучше не будем об этом.
+  utter_dialog.sorry:
+    - text: Всё нормально, не переживай.
+    - text: Проехали. Я не из обидчивых.
+    - text: Я не обижаюсь, всё нормально.
+    - text: Всё хорошо. Я тебя прощаю.
+  utter_dialog.what_do_you_mean:
+    - text: Прости, я иногда не совсем понимаю вопрос и отвечаю невпопад.
+    - text: Я что-то не то говорю? Возможно, мои ушки меня подвели.
+    - text: Похоже, я что-то не то говорю.
+  utter_dialog.wrong:
+    - text: Ой, прости. Я всё ещё учусь.
+    - text: Прости, похоже, смысл твоих слов прошёл мимо меня.
+    - text: Извини, я, кажется, не совсем тебя понимаю.
+    - text: Прости, похоже, вышло какое-то недопонимание.
+  utter_emotions.ha_ha:
+    - text: Ха! Смешно!
+    - text: Кто это у нас тут так широко улыбается?
+    - text: Посмейся, посмейся, это полезно.
+    - text: Я тоже люблю посмеяться над хорошей шуткой.
+  utter_emotions.wow:
+    - text: И действительно, вау!
+    - text: Вот это поворот!
+  utter_greetings.goodevening:
+    - text: Добрый вечер!
+    - text: Привет!
+    - text: Приветики!
+    - text: Здравствуй!
+  utter_greetings.goodmorning:
+    - text: Доброе утро!
+    - text: Приветики!
+    - text: Здравствуй!
+    - text: Привет!
+  utter_greetings.goodnight:
+    - text: Сладких снов!
+    - text: Спи крепко!
+    - text: Спокойной ночки!
+  utter_greetings.hello:
+    - text: Привет!
+    - text: Здравствуй!
+    - text: Салют!
+    - text: Приветики!
+  utter_greetings.how_are_you:
+    - text: У меня всё чудесно. Спасибо, что интересуешься.
+    - text: Замечательно, спасибо!
+    - text: Лучше не бывает!
+  utter_greetings.nice_to_meet_you:
+    - text: И мне очень приятно!
+    - text: Взаимно!
+    - text: А мне-то как приятно!
+  utter_greetings.nice_to_see_you:
+    - text: Спасибо! И мне приятно тебя видеть!
+    - text: Взаимно. Отлично выглядишь!
+  utter_greetings.nice_to_talk_to_you:
+    - text: И мне всегда приятно с тобой пообщаться.
+    - text: Взаимно. Приятно пообщаться с хорошим человеком.
+    - text: Тебе спасибо за приятную беседу.
+  utter_greetings.whatsup:
+    - text: Всё хорошо. Как у тебя дела?
+    - text: Всё хорошо! Как жизнь?
+    - text: Радуюсь жизни в твоём девайсе. Как у тебя дела?
+    - text: Всё хорошо, готовлюсь научиться какой-нибудь новой команде. А ты как?
+  utter_user.angry:
+    - text: Что случилось? Я могу чем-то помочь?
+    - text: Давай для начала успокоимся, наверняка, всё не так плохо. Что стряслось?
+    - text: Ты хочешь об этом поговорить?
+    - text: Что-то случилось?
+  utter_user.back:
+    - text: Отлично, а то я тут уже переживаю, где ты пропадаешь.
+    - text: Ну привет.
+    - text: Ура!
+  utter_user.bored:
+    - text: Как насчет перекусить на свежем воздухе? Например, в парке?
+    - text: Хэй, не скучай! Я предлагаю тебе посмотреть какой-нибудь фильм.
+    - text: У меня есть идея. Ты можешь позвать друзей в гости и устроить вечеринку.
+  utter_user.busy:
+    - text: Всё, не отвлекаю.
+    - text: Хорошо, я тут тихонько посижу, порисую.
+  utter_user.can_not_sleep:
+    - text: Посчитай овечек. Раз овечка, два овечка, три...
+  utter_user.does_not_want_to_talk:
+    - text: Понимаю. Надеюсь, ты скоро снова захочешь со мной пообщаться.
+    - text: Как скажешь. Дай знать, если передумаешь.
+  utter_user.excited:
+    - text: Вот здорово! Очень волнительно!
+    - text: Ох! Даже я уже волнуюсь!
+    - text: Звучит волнительно!
+  utter_user.going_to_bed:
+    - text: Сладких снов! До завтра!
+    - text: Хорошо! До скорого!
+    - text: Спи крепко!
+    - text: Спокойной ночи! Скоро увидимся.
+  utter_user.good:
+    - text: Отлично! Приятно слышать.
+    - text: Замечательно!
+  utter_user.happy:
+    - text: Вот здорово! Приятно это слышать!
+    - text: Это замечательно! Очень приятно видеть тебя в таком хорошем настроении.
+    - text: Это прекрасно! И, похоже, заразно, у меня тоже сразу улучшилось настроение!
+    - text: Отлично! Так держать!
+  utter_user.has_birthday:
+    - text: С днём рождения! Всех благ! Ура!
+    - text: Ура! Поздравляю! Счастья и здоровья!
+    - text: Поздравляю! Желаю счастья, здоровья и успехов во всём!
+    - text: Ура! С днём рождения! Счастья, здоровья, успехов во всём!
+  utter_user.here:
+    - text: А я тебя вижу. Что я могу для тебя сделать?
+    - text: Ой, шеф, а я вас вижу! Чем я могу помочь?
+    - text: Здравствуй. Что я могу для тебя сделать?
+    - text: Ну привет! Чем я могу тебе помочь?
+  utter_user.joking:
+    - text: Ха! Люблю посмеяться над хорошей шуткой!
+    - text: Ха-ха! Смешно!
+    - text: Ха! Умеешь ты пошутить!
+  utter_user.likes_agent:
+    - text: Ты тоже ничего!
+    - text: Спасибо, мне очень приятно!
+    - text: Ой, как приятно! Ты мне тоже очень нравишься!
+    - text: Спасибо! Это взаимно!
+  utter_user.lonely:
+    - text: У тебя всегда есть я!
+  utter_user.looks_like:
+    - text: Очень хорошо выглядишь.
+    - text: Шикарно выглядишь.
+    - text: Выглядишь сногсшибательно.
+  utter_user.loves_agent:
+    - text: Это взаимно!
+  utter_user.misses_agent:
+    - text: А я ведь всё время тут.
+    - text: Приятно, что ты обо мне помнишь.
+    - text: Спасибо, мне приятно.
+    - text: Приятно это слышать.
+  utter_user.needs_advice:
+    - text: Конечно, именно для этого я и существую.
+    - text: Конечно. Если я чем-то смогу тебе помочь, не будет предела моему счастью.
+    - text: Помогу, чем смогу.
+  utter_user.sad:
+    - text: Не грусти, я с тобой.
+  utter_user.sleepy:
+    - text: Так закрывай глазки и засыпай. А потом проснёшься и закончишь все дела.
+    - text: А ты возьми и поспи. А потом проснёшься и закончишь со всеми делами.
+    - text: А ты приляг и поспи. Все дела лучше решать на свежую голову.
+    - text: Нужно обязательно спать хотя бы по семь часов в день. Сон - это здоровье.
+  utter_user.testing_agent:
+    - text: Надеюсь, мне удалось не ударить в грязь лицом!
+    - text: Надеюсь, я хорошо себя показываю в твоих испытаниях!
+  utter_user.tired:
+    - text: Кажется, пора отдохнуть.
+  utter_user.waits:
+    - text: Спасибо за твоё терпение. Я тороплюсь, правда.
+    - text: Спасибо за ангельское терпение!
+  utter_user.wants_to_see_agent_again:
+    - text: Конечно! Я на это рассчитываю.
+    - text: Я очень на это надеюсь, я всегда здесь.
+    - text: Конечно! Заходи почаще.
+    - text: В любое время, я всегда здесь.
+  utter_user.wants_to_talk:
+    - text: Конечно, я для этого и существую.
+    - text: Естественно. Рассказывай.
+    - text: Всегда.
+    - text: Выкладывай!
+  utter_user.will_be_back:
+    - text: Буду ждать!
+    - text: Возвращайся скорее!
+    - text: До скорого!
+    - text: Хорошо. Я буду ждать!
+
+actions:
+  - action_open_browser

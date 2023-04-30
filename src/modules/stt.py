@@ -137,7 +137,7 @@ class SpeechToText:
             frame_length=512  # self.keyword_detector.frame_length
         )
 
-    def recognize(self, callback):
+    async def recognize(self, callback):
         print("Говорите...")
         try:
             while True:
@@ -156,7 +156,7 @@ class SpeechToText:
                         break
 
                     self.recorder.stop()
-                    callback(text)
+                    await callback(text)
                     self.recorder.start()
         except Exception as _ex:
             print(_ex)
